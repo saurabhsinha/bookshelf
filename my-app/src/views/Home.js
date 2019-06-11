@@ -3,7 +3,7 @@ import Bookshelf from "../components/Bookshelf";
 import {getAll } from "../books/booksAPI.js"
 
 export default class Home extends Component {
-    async booksmount() {
+    async componentDidMount() {
         const books = await getAll();
         console.log(books)
     }

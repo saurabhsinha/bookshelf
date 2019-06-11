@@ -1,7 +1,7 @@
 const headers = {
     'Accept': 'application/json'
 }
-export const getAll = () =>
-    fetch('./allbooks.json', { headers })
+export const getAll =()=>
+    fetch("./allbooks.json")
         .then(res => res.json())
-        .then(data => data.books);
+        .then(data =>  data.books);
