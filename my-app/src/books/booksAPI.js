@@ -1,7 +1,6 @@
-const headers = {
-    'Accept': 'application/json'
-}
+
 export const getAll =()=>
-    fetch("./allbooks.json")
-        .then(res => res.json())
-        .then(data =>  data.books);
+    fetch("../../public/allbooks.json")
+        .then(function(data){
+            console.log(data)
+        });

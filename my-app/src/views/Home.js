@@ -1,11 +1,14 @@
 import React, {Component} from "react";
 import Bookshelf from "../components/Bookshelf";
 import {getAll } from "../books/booksAPI.js"
-
+const data = require("../books/allbooks")
 export default class Home extends Component {
     async componentDidMount() {
-        const books = await getAll();
-        console.log(books)
+        try{
+            console.log(data)
+        } catch (err) {
+            console.log(err)
+        }
     }
     render() {
         return ( <div className="list-books">
