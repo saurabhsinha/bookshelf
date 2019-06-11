@@ -10,8 +10,8 @@ class BooksApp extends React.Component {
     return (
         <div className="app">
           <Switch>
-            <Route exact to={"/"} component={Home}/>
-            <Route exact to={"/Search"} component={Search}/>
+            <Route exact path={"/"} component={Home}/>
+            <Route exact path={"/search"} component={Search}/>
           </Switch>
         </div>
     )
