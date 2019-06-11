@@ -7,7 +7,7 @@ export default class Bookshelf extends Component {
             <h2 className="bookshelf-title">{this.props.title}</h2>
             <div className="bookshelf-books">
                 <ol className="books-grid">
-                    <Book/>
+                    {this.props.bookss && this.props.bookss.map(book => <Book {...book}/>)}
                 </ol>
             </div>
         </div>)
