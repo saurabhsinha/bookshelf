@@ -13,12 +13,9 @@ export default class Index extends Component {
                 const read = books.filter(book => book.shelf==="read");
                 const wantToRead = books.filter(book => book.shelf==="wantToRead");
                 this.setState({books,currentlyReading,wantToRead,read});
-                console.log(currentlyReading,read,wantToRead)
             },
             moveBook: (book,shelf, newShelfs) => {
-                console.log(book,shelf, newShelfs)
                 const newBooks = this.state.books.map(allBooks => {
-                    console.log(allBooks)
                     const foundId = newShelfs.find(
                         bookId => bookId == allBooks.id
                     );

@@ -7,11 +7,18 @@ export const getAll =()=> {
     });
 }
 export const update = (book, shelf) => {
+    var copy = Object.assign({}, book);
+    var bookfound = books.books.find(b => b.id === book.id)
+    if (!bookfound) {
+        books.books.push(copy)
+    }
     return new Promise( (resolve, reject) => {
         var booksArray = books.books;
         booksArray = booksArray.map(obj => {
             if (obj.id === book.id) {
                 obj.shelf = shelf
+            } else {
+
             }
             return obj;
         })
