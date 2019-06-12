@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Bookshelf from "../components/Bookshelf";
 import {getAll } from "../books/booksAPI.js"
+import FAB from "../components/Fab";
 
 export default class Home extends Component {
     async componentDidMount() {
@@ -21,9 +22,7 @@ export default class Home extends Component {
                 <Bookshelf title="want to read" bookss={this.props.wantToRead} moveBook={this.props.moveBook}/>
                 <Bookshelf title="read" bookss={this.props.read} moveBook={this.props.moveBook}/>
             </div>
-            <div className="open-search">
-                <button onClick={() => this.setState({ showSearchPage: true })}>Add a book</button>
-            </div>
+            <FAB></FAB>
         </div>)
     }
 }

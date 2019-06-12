@@ -16,18 +16,18 @@ export default class Index extends Component {
                 console.log(currentlyReading,read,wantToRead)
             },
             moveBook: (book,shelf, newShelfs) => {
-                // console.log(book,shelf, newShelfs)
-                // const newBooks = this.state.books.map(allBooks => {
-                //     console.log(allBooks)
-                //     const foundId = newShelfs.find(
-                //         bookId => bookId == allBooks.id
-                //     )
-                //     if(foundId) {
-                //         allBooks.shelf = newShelfs;
-                //     }
-                //     return allBooks;
-                // })
-                this.state.addBooks(newShelfs)
+                console.log(book,shelf, newShelfs)
+                const newBooks = this.state.books.map(allBooks => {
+                    console.log(allBooks)
+                    const foundId = newShelfs.find(
+                        bookId => bookId == allBooks.id
+                    );
+                    if(foundId) {
+                        allBooks.shelf = newShelfs;
+                    }
+                    return allBooks;
+                });
+                this.state.addBooks(newBooks)
             }
         }
     }

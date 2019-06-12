@@ -2,9 +2,11 @@ import React, {Component} from "react";
 import {update} from '../books/booksAPI.js'
 export default class Books extends Component {
     handleChange = async e => {
+        e.persist()
         try {
             const shelf = e.target.value;
             const book = this.props;
+            console.log(book,shelf)
             const result = await update(book, shelf)
             this.props.moveBook(book, shelf, result)
         } catch (err) {
